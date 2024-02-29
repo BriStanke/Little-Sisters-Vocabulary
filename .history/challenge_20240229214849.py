@@ -85,7 +85,6 @@ def remove_suffix_from_word():
         else:
             print("Invalid option. Please choose a word from the provided list.")
 
-    # Error Handling if chosen word is too short
     if len(choose) < 4:
         print("The chosen word is too short to remove the '-ness' suffix.")
     else:
@@ -107,22 +106,18 @@ remove_suffix_from_word()
 # Task 4
 print("4. Extract and transform a word -->\n")
 
-def extract_and_transform_words():
-    adjective_to_verb1 = "I need to make that bright."
-    # split sentence to substrings with .split(). Will split the string on whitespace
-    adjective_to_verb1.split()
+adjective_to_verb1 = "I need to make that bright."
+# split sentence to substrings with .split(). Will split the string on whitespace
+adjective_to_verb1.split()
 
-    print("First split sentence:", adjective_to_verb1.split())
-    # selecting last word, removing '.' and adding 'en' to the end
-    print("Extracted and transformed last word:", adjective_to_verb1.split()[-1].strip(".") + "en")
+print("First split sentence:", adjective_to_verb1.split())
+# selecting last word, removing '.' and adding 'en' to the end
+print("Extracted and transformed last word:", adjective_to_verb1.split()[-1].strip(".") + "en")
 
-    adjective_to_verb2 = "It got dark as the sun set."
-    # split sentence to substrings with .split(). Will split the string on whitespace
-    adjective_to_verb2.split()
+adjective_to_verb2 = "It got dark as the sun set."
+# split sentence to substrings with .split(). Will split the string on whitespace
+adjective_to_verb2.split()
 
-    print("\nSecond split sentence:", adjective_to_verb2.split())
-    # selecting third word and adding 'en' to the end
-    print("Extracted and transformed 3rd word:", adjective_to_verb2.split()[2] + "en")
-
-# Call the function to execute
-extract_and_transform_words()
+print("\nSecond split sentence:", adjective_to_verb2.split())
+# selecting third word and adding 'en' to the end
+print("Extracted and transformed 3rd word:", adjective_to_verb2.split()[2] + "en")

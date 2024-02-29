@@ -68,61 +68,49 @@ add_prefix_to_groups()
 # Task 3
 print("3. Remove a suffix from a word -->")
 
-def remove_suffix_from_word():
-    first = ('''
-        heaviness
-        sadness
-    ''')
-    print(first)
+first = ('''
+heaviness
+sadness
+''')
+print(first)
 
-    # while loop for Error Handling - Invalid inputs
-    while True:
-        choose = input("Please choose a word from the 2 word list you want to remove '-ness': ").lower()  # .lower() for Error Handling - Incorrect capitalization
+# while loop for Error Handling - Invalid inputs
+while True:
+    choose = input("Please choose a word from the 2 word list you want to remove '-ness': ").lower()  # .lower() for Error Handling - Incorrect capitalization
 
-        if choose in first:
-            print("You choose:", choose)
-            break
-        else:
-            print("Invalid option. Please choose a word from the provided list.")
-
-    # Error Handling if chosen word is too short
-    if len(choose) < 4:
-        print("The chosen word is too short to remove the '-ness' suffix.")
+    if choose in first:
+        print("You choose:", choose)
+        break
     else:
-        # remove 4 last letters
-        remove_suffix_ness = choose[:-4]
-        # print(remove_suffix_ness)         # test print
+        print("Invalid option. Please choose a word from the provided list.")
 
-        # checking if the word is ending in 'i'
-        if remove_suffix_ness[-1] == 'i':
-            # removing last letter 'i' and replacing with 'y'
-            print("After removing '-ness' and changing last letter:", remove_suffix_ness[:-1] + "y", "\n")
-        else:
-            # if word doesn't end with 'i' print the output
-            print("After removing '-ness':", remove_suffix_ness, "\n")
+# remove 4 last letters
+remove_suffix_ness = choose[:-4]
+# print(remove_suffix_ness)         # test print
 
-# Call the function to execute
-remove_suffix_from_word()
+# checking if the word is ending in 'i'
+if remove_suffix_ness[-1] == 'i':
+    # removing last letter 'i' and replacing with 'y'
+    print("After removing '-ness' and changing last letter:", remove_suffix_ness[:-1] + "y", "\n")
+else:
+    # if word doesn't end with 'i' print the output
+    print("After removing '-ness':", remove_suffix_ness, "\n")
 
 # Task 4
 print("4. Extract and transform a word -->\n")
 
-def extract_and_transform_words():
-    adjective_to_verb1 = "I need to make that bright."
-    # split sentence to substrings with .split(). Will split the string on whitespace
-    adjective_to_verb1.split()
+adjective_to_verb1 = "I need to make that bright."
+# split sentence to substrings with .split(). Will split the string on whitespace
+adjective_to_verb1.split()
 
-    print("First split sentence:", adjective_to_verb1.split())
-    # selecting last word, removing '.' and adding 'en' to the end
-    print("Extracted and transformed last word:", adjective_to_verb1.split()[-1].strip(".") + "en")
+print("First split sentence:", adjective_to_verb1.split())
+# selecting last word, removing '.' and adding 'en' to the end
+print("Extracted and transformed last word:", adjective_to_verb1.split()[-1].strip(".") + "en")
 
-    adjective_to_verb2 = "It got dark as the sun set."
-    # split sentence to substrings with .split(). Will split the string on whitespace
-    adjective_to_verb2.split()
+adjective_to_verb2 = "It got dark as the sun set."
+# split sentence to substrings with .split(). Will split the string on whitespace
+adjective_to_verb2.split()
 
-    print("\nSecond split sentence:", adjective_to_verb2.split())
-    # selecting third word and adding 'en' to the end
-    print("Extracted and transformed 3rd word:", adjective_to_verb2.split()[2] + "en")
-
-# Call the function to execute
-extract_and_transform_words()
+print("\nSecond split sentence:", adjective_to_verb2.split())
+# selecting third word and adding 'en' to the end
+print("Extracted and transformed 3rd word:", adjective_to_verb2.split()[2] + "en")
